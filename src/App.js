@@ -43,21 +43,31 @@ function App() {
     });
   }
   const updateTodo = (key, data) => {
-    todos.splice(key, 1, data)
-    setTodos([...todos])
-    toast.success(`Task updated successfully...`)
-    setEditData({
-      key: -1,
-      data: ''
-    });
+    if (data) {
+      todos.splice(key, 1, data)
+      setTodos([...todos])
+      toast.success(`Task updated successfully...`)
+      setEditData({
+        key: -1,
+        data: ''
+      });
+    }else{
+      todos.splice(key, 1)
+      setTodos([...todos])
+      setEditData({
+        key: -1,
+        data: ''
+      });
+      toast.success(`Task deleted successfully...`)
+    }
   }
 
   const countDone = (e) => {
-    todos.forEach(()=>{
-      if(e.target.checked){
-        setDTotal(DTotal+1)
-      }else{
-        setDTotal(DTotal-1)
+    todos.forEach(() => {
+      if (e.target.checked) {
+        setDTotal(DTotal + 1)
+      } else {
+        setDTotal(DTotal - 1)
       }
     })
 
@@ -68,9 +78,9 @@ function App() {
     addToLocalStorage(todos)
   }, [todos])
   return (
-    <div className="w-100 bg-gray-500 h-screen pt-3 ">
+    <div className="w-100 bg-gray-500 h-screen overflow-y-auto pt-3 ">
       <Input addTodo={addTodo} editData={editData} updateTodo={updateTodo} />
-      <Status total={todos.length} Dtotal={DTotal}/>
+      <Status total={todos.length} Dtotal={DTotal} />
       <List todos={todos} addTodo={addTodo} deleteTodo={deleteTodo} editTodo={editTodo} editData={editData} countDone={countDone} />
       <Toaster />
     </div>
