@@ -9,7 +9,9 @@ export default function List(props) {
           >
             <div className="w-8/12 md:w-9/12 px-2">{todo}</div>
             <div className=" flex justify-center items-center w-10 me-5">
-              <input type="checkbox" className="checked:shadow-lg h-6 w-6"/>
+              <input type="checkbox"
+              onChange={props.countDone}
+               className="checked:shadow-lg h-6 w-6"/>
             </div>
             <div className="w-4/12 flex justify-evenly flex-wrap md:w-3/12">
               <button

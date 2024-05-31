@@ -11,12 +11,12 @@ function getFromLocalStorage(todos) {
   return JSON.parse(localStorage.getItem('todos'))
 }
 function App() {
-  let [todos, setTodos] = useState(getFromLocalStorage()?? [])
-  console.log(todos);
+  let [todos, setTodos] = useState(getFromLocalStorage() ?? [])
   let [editData, setEditData] = useState({
     key: -1,
     data: ''
   })
+  const [DTotal, setDTotal] = useState(0);
   const addTodo = (todo) => {
     if (todo) {
       if (todos.includes(todo)) {
@@ -51,14 +51,27 @@ function App() {
       data: ''
     });
   }
-  useEffect(() =>{
+
+  const countDone = (e) => {
+    todos.forEach(()=>{
+      if(e.target.checked){
+        setDTotal(DTotal+1)
+      }else{
+        setDTotal(DTotal-1)
+      }
+    })
+
+
+  };
+
+  useEffect(() => {
     addToLocalStorage(todos)
-  },[todos])
+  }, [todos])
   return (
     <div className="w-100 bg-gray-500 h-screen pt-3 ">
       <Input addTodo={addTodo} editData={editData} updateTodo={updateTodo} />
-      <Status />
-      <List todos={todos} addTodo={addTodo} deleteTodo={deleteTodo} editTodo={editTodo} editData={editData} />
+      <Status total={todos.length} Dtotal={DTotal}/>
+      <List todos={todos} addTodo={addTodo} deleteTodo={deleteTodo} editTodo={editTodo} editData={editData} countDone={countDone} />
       <Toaster />
     </div>
   );
