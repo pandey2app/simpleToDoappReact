@@ -8,7 +8,6 @@ export default function Status() {
         backgroundImage: `url(${mybg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundAttachment: "fixed"
       }}
       className="border-2 w-11/12 rounded-xl m-auto h-20 mb-5 flex justify-evenly gap-1"
