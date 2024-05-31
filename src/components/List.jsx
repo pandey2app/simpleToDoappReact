@@ -1,13 +1,13 @@
 export default function List(props) {
   return (
-    <ul className="m-auto text-3xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto">
+    <ul className="m-auto text-3xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto overflow-y-auto">
       {props.todos.length > 0 ? (
         props.todos.map((todo, key) => (
           <li
             key={key}
             className="w-full flex justify-evenly flex-nowrap bg-violet-300 font-serif rounded-lg px-2 py-1"
           >
-            <div className="w-8/12 md:w-9/12 px-2">{todo}</div>
+            <div className="w-8/12 md:w-9/12 px-2 overflow-y-auto">{todo}</div>
             <div className=" flex justify-center items-center w-10 me-5">
               <input type="checkbox"
               onChange={props.countDone}
