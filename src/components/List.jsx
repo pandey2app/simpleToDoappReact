@@ -16,14 +16,14 @@ export default function List(props) {
             <div className="w-4/12 flex justify-evenly items-center flex-wrap md:w-3/12">
               <div className="w-full">
                 <button
-                  className="w-11/12 md:w-5/12 bg-yellow-500 hover:bg-yellow-600 text-lg  m-1 px-2 h-8 text-center text-white-700 font-serif  py-1 rounded-md hover:text-zinc-50"
+                  className="w-11/12 md:w-5/12 bg-yellow-500 hover:bg-yellow-600 transition duration-200 ease-in-out text-lg  m-1 px-2 h-8 text-center text-white-700 font-serif  py-1 rounded-md hover:text-zinc-50"
                   onClick={() => props.editTodo(key, todo)}
                   disabled={props.editData.key === -1 ? false : true}
                 >
                   {"Edit"}
                 </button>
                 <button
-                  className="w-11/12 md:w-5/12 bg-red-500 hover:bg-red-600 text-lg m-1 px-2 h-8 text-center text-white-700 font-serif  py-1 rounded-md hover:text-zinc-50"
+                  className="w-11/12 md:w-5/12 bg-red-500 hover:bg-red-600 transition duration-200 ease-in-out text-lg m-1 px-2 h-8 text-center text-white-700 font-serif  py-1 rounded-md hover:text-zinc-50"
                   onClick={() => props.deleteTodo(todo)}
                   disabled={props.editData.key === -1 ? false : true}
                 >
