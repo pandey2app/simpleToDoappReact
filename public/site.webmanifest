@@ -49,7 +49,7 @@
         }
     ],
     "start_url": "https://checknowapp.netlify.app",
-    "theme_color": "#448aff",
+    "theme_color": "#FFF176",
     "background_color": "#448aff",
     "display": "standalone"
 }
