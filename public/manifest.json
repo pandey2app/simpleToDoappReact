@@ -16,7 +16,19 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
-    }
+    },
+    {
+      "src": "/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+  },
+  {
+      "src": "/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+  }
   ],
   "description": "Stay organized and boost productivity with Check-It app. Manage tasks, set reminders, and track progress with ease.",
   "categories": ["utilities", "productivity","lifestyle"],
