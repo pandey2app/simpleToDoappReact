@@ -1,6 +1,6 @@
 {
-    "name": "Check It",
-    "short_name": "Check It App",
+    "name": "Check It App",
+    "short_name": "Check It",
     "icons": [
         {
             "src": "favicon.ico",
