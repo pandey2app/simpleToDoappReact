@@ -8,10 +8,14 @@ export default function List(props) {
             className="w-full flex justify-evenly flex-nowrap bg-violet-300 font-serif rounded-lg px-2 py-1"
           >
             <div className="w-8/12 md:w-9/12 px-2 overflow-y-auto">{todo}</div>
-            <div className=" flex justify-center items-center w-10 me-5">
-              <input type="checkbox"
-                onChange={props.countDone}
-                className="checked:shadow-lg h-6 w-6" />
+            <div className="flex items-center">
+              <div className=" flex flex-wrap h-20 justify-center items-center w-10 me-2">
+                <label for={`done${key}`} className="hidden">Done</label>
+                <input type="checkbox"
+                  id={`done${key}`}
+                  onChange={props.countDone}
+                  className="checked:shadow-lg h-6 w-6" />
+              </div>
             </div>
             <div className="w-4/12 flex justify-evenly items-center flex-wrap md:w-3/12">
               <div className="w-full">
