@@ -1,6 +1,6 @@
 export default function List(props) {
   return (
-    <ul className="m-auto min-md:text-3xl text-2xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto overflow-y-auto">
+    <ul className="m-auto min-md:text-3xl text-2xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto overflow-y-auto mb-4">
       {props.todos.length > 0 ? (
         props.todos.map((todo, key) => (
           <li
