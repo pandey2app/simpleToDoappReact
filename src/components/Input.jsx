@@ -33,7 +33,7 @@ export default function Input(props) {
           placeholder="Enter To Do..."
           value={todo}
           onChange={inputChange}
-          className="md:w-10/12 w-full h-12 focus:border-2 hover:border-violet-700 border-2 m-1 px-3 py-1 focus:outline-none focus:border-green-700  text-3xl font-semibold rounded-md"
+          className="md:w-10/12 w-full h-12 focus:border-2 shadow-[0_0px_30px_-15px_rgba(255,255,255,1)] hover:border-violet-700 border-2 m-1 px-3 py-1 focus:outline-none focus:border-green-700  text-3xl font-semibold rounded-md"
         />
 
         <button className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-3xl m-1 px-4 h-12 text-center font-semibold text-red-700 font-serif  py-1 rounded-md hover:text-white">
