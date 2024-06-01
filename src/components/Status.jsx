@@ -1,16 +1,9 @@
 
-import mybg from "../images/bg.jpg";
 
-export default function Status(props) {  
+export default function Status(props) {
   return (
     <div
-      style={{
-        backgroundImage: `url(${mybg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-      }}
-      className="border-2 w-11/12 rounded-xl flex-wrap m-auto h-auto mb-5 flex justify-evenly text-center text-2xl font-serif px-1 py-2"
+      className="border-2 w-11/12 rounded-xl flex-wrap m-auto h-auto mb-5 flex justify-evenly shadow-[0_0px_30px_-15px_rgba(255,255,255,1)] text-center text-2xl font-serif font-bold px-1 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
     >
       <div
         id="total-tasks"

@@ -1,6 +1,6 @@
 export default function List(props) {
   return (
-    <ul className="m-auto text-3xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto overflow-y-auto">
+    <ul className="m-auto min-md:text-3xl text-2xl md:text-start w-11/12 flex flex-wrap gap-2 overflow-hidden h-auto overflow-y-auto">
       {props.todos.length > 0 ? (
         props.todos.map((todo, key) => (
           <li
@@ -13,7 +13,7 @@ export default function List(props) {
               onChange={props.countDone}
                className="checked:shadow-lg h-6 w-6"/>
             </div>
-            <div className="w-4/12 flex justify-evenly flex-wrap md:w-3/12">
+            <div className="w-4/12 flex justify-evenly items-center flex-wrap md:w-3/12">
               <button
                 className="w-11/12 md:w-5/12 bg-yellow-500 hover:bg-yellow-600 text-lg  m-1 px-2 h-8 text-center text-white-700 font-serif  py-1 rounded-md hover:text-zinc-50"
                 onClick={() => props.editTodo(key, todo)}
