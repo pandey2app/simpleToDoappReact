@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Input from './components/Input';
 import List from './components/List';
 import Status from './components/Status';
+import Header from './components/Header';
 
 function addToLocalStorage(todos) {
   localStorage.setItem('todos', JSON.stringify(todos))
@@ -78,7 +79,8 @@ function App() {
     addToLocalStorage(todos)
   }, [todos])
   return (
-    <div className="w-100 bg-gray-500 h-screen overflow-y-auto pt-3 ">
+    <div className="w-100 bg-gray-500 h-screen overflow-y-auto ">
+      <Header />
       <Input addTodo={addTodo} editData={editData} updateTodo={updateTodo} />
       <Status total={todos.length} Dtotal={DTotal} />
       <List todos={todos} addTodo={addTodo} deleteTodo={deleteTodo} editTodo={editTodo} editData={editData} countDone={countDone} />
