@@ -18,6 +18,20 @@
       "sizes": "512x512"
     }
   ],
+  "description": "Stay organized and boost productivity with Check-It app. Manage tasks, set reminders, and track progress with ease.",
+  "categories": ["utilities", "productivity","lifestyle"],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/screenshot2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
   "start_url": "https://checknowapp.netlify.app",
   "display": "standalone",
   "theme_color": "#000000",
